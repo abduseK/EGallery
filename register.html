@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Collective - Register</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Canvas Collective</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="register" class="registration">
+    <h2>Register for Our Events</h2>
+    <form id="registrationForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required>
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="********" required>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <script>
+    // Form Validation
+    const form = document.getElementById('registrationForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (!name || !email || !password) {
+        alert('All fields are required!');
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Please enter a valid email address!');
+        return;
+      }
+
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters long!');
+        return;
+      }
+
+      alert('Registration Successful!');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
