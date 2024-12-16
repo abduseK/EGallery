@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ethiopian - Art Gallery</title>
+  <title>EthGallery - Art Gallery</title>
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <div class="logo">Eth<span>Gallery</span></div>
     <nav>
@@ -20,11 +21,15 @@
     </nav>
   </header>
 
-  <!-- Landing Page -->
   <section id="landing" class="landing">
-    <h1>Welcome to Canvas Collective</h1>
-    <p>Experience the world of art like never before. Explore exhibitions, join workshops, and get custom artwork.</p>
-    <a href="register.html">Register Now</a>
+    <div class="landing-content">
+        <button class="visit-gallery">Art Gallery Platform</button>
+        <h2>Dive into creativity with our <br> gallery collection</h2>
+      <div class="button-container">
+        <p>Immerse yourself in the captivating stories behind <br> each artwork, as our artists draw inspiration from <br> cultures, nature, and everyday life.</p>
+        <button onclick="location.href='register.html'" class="visit-gallery">Register to Visit</button>
+      </div>
+    </div>
   </section>
 </body>
 </html>
